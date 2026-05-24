@@ -6,13 +6,15 @@ pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymou
 # 2. Open Termux X11 app
 am start -n com.termux.x11/.MainActivity
 
-# 3. Display "Stop Game" notification
-termux-notification \
-     --title "PokeWilds Running" \
-     --content "Tap the notification to stop the game." \
-     --action "bash ~/.shortcuts/stop_pokewilds.sh" \
-     --id pokewilds \
-     --ongoing
+# 3. Display "Stop Game" notification if Termux:API is installed
+if termux-api-start; then
+     termux-notification \
+          --title "PokeWilds Running" \
+          --content "Tap the notification to stop the game." \
+          --action "bash ~/.shortcuts/stop_pokewilds.sh" \
+          --id pokewilds \
+          --ongoing
+fi
 
 # 3. Launch the game inside Debian in the background
 proot-distro login pokewilds -- bash -c "
