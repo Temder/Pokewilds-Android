@@ -3,11 +3,11 @@
 pulseaudio --start --exit-idle-time=-1 > /dev/null 2>&1
 pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1
 
-# 2. Open Termux X11 app
+# 2. Open Termux API and Termux X11 app
+am start -n com.termux.api/.activities.TermuxAPIMainActivity
 am start -n com.termux.x11/.MainActivity
 
 # 3. Display "Stop Game" notification if Termux:API is installed
-am start -n com.termux.api/.activities.TermuxAPIMainActivity
 if termux-api-start; then
      termux-notification \
           --title "PokeWilds Running" \
