@@ -18,7 +18,7 @@ Install and setup the following apps.
 
 Open Termux and run the following. This will create an environment for Pokewilds to run.
 ```bash
-termux-setup-storage && yes | pkg update && pkg upgrade -y && pkg in x11-repo pulseaudio proot-distro termux-api wget unzip -y && proot-distro install --override-alias pokewilds debian && proot-distro login pokewilds -- bash -c "apt update && apt upgrade -y && apt install x11-utils pulseaudio-utils openjdk-21-jre-headless unclutter -y"
+termux-setup-storage && yes | pkg update && pkg upgrade -y && pkg install x11-repo  pulseaudio proot-distro termux-api wget unzip -y && pkg install termux-x11-nightly -y && proot-distro install --override-alias pokewilds debian && proot-distro login pokewilds -- bash -c "apt update && apt upgrade -y && apt install x11-utils pulseaudio-utils openjdk-21-jre-headless unclutter -y"
 ```
 If you want a fullscreen window (default is a square) run the following command.
 ```bash
