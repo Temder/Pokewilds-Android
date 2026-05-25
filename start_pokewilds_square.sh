@@ -7,6 +7,7 @@ pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymou
 am start -n com.termux.x11/.MainActivity
 
 # 3. Display "Stop Game" notification if Termux:API is installed
+am start -n com.termux.api/.activities.TermuxAPIMainActivity
 if termux-api-start; then
      termux-notification \
           --title "PokeWilds Running" \
