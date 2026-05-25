@@ -46,7 +46,7 @@ mkdir -p ~/.shortcuts && wget -O ~/.shortcuts/start_pokewilds.sh "https://raw.gi
 **Option 1: Automatic download/extraction (paste command in Termux)**
 
 ```bash
-mkdir -p /sdcard/Pokewilds && wget -O /sdcard/Pokewilds/pokewilds.zip "https://github.com/SheerSt/pokewilds/releases/latest/download/pokewilds-otherplatforms.zip" && unzip /sdcard/Pokewilds/pokewilds.zip -d /sdcard/Pokewilds/
+mkdir -p /sdcard/Pokewilds && wget -O /sdcard/Pokewilds/pokewilds.zip "https://github.com/SheerSt/pokewilds/releases/latest/download/pokewilds-otherplatforms.zip" && unzip -o /sdcard/Pokewilds/pokewilds.zip -d /sdcard/Pokewilds/
 ```
 
 **Option 2: Manual download/extraction (fallback if Option 1 is not working)**
