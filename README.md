@@ -32,13 +32,13 @@ Choose a command to download the scripts based on your preference.
 **Option 1: square game window**
 
 ```bash
-mkdir -p ~/.shortcuts && wget -O ~/.shortcuts/start_pokewilds.sh "https://raw.githubusercontent.com/Temder/Pokewilds-Android/refs/heads/main/start_pokewilds_square.sh" && wget -O ~/.shortcuts/stop_pokewilds.sh "https://raw.githubusercontent.com/Temder/Pokewilds-Android/refs/heads/main/stop_pokewilds.sh"
+mkdir -p ~/.shortcuts && wget -O ~/.shortcuts/start_pokewilds.sh "https://raw.githubusercontent.com/Temder/Pokewilds-Android/refs/heads/main/start_pokewilds_square.sh" && chmod +x ~/.shortcuts/start_pokewilds.sh && wget -O ~/.shortcuts/stop_pokewilds.sh "https://raw.githubusercontent.com/Temder/Pokewilds-Android/refs/heads/main/stop_pokewilds.sh" && chmod +x ~/.shortcuts/stop_pokewilds.sh
 ```
 
 **Option 2: fullscreen/flexible game window**
 
 ```bash
-mkdir -p ~/.shortcuts && wget -O ~/.shortcuts/start_pokewilds.sh "https://raw.githubusercontent.com/Temder/Pokewilds-Android/refs/heads/main/start_pokewilds_fullscreen.sh" && wget -O ~/.shortcuts/stop_pokewilds.sh "https://raw.githubusercontent.com/Temder/Pokewilds-Android/refs/heads/main/stop_pokewilds.sh"
+mkdir -p ~/.shortcuts && wget -O ~/.shortcuts/start_pokewilds.sh "https://raw.githubusercontent.com/Temder/Pokewilds-Android/refs/heads/main/start_pokewilds_fullscreen.sh" && chmod +x ~/.shortcuts/start_pokewilds.sh && wget -O ~/.shortcuts/stop_pokewilds.sh "https://raw.githubusercontent.com/Temder/Pokewilds-Android/refs/heads/main/stop_pokewilds.sh" && chmod +x ~/.shortcuts/stop_pokewilds.sh
 ```
 
 ## 4. Get pokewilds package
