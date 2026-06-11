@@ -55,14 +55,11 @@ pkg install -y termux-x11-nightly
 check_status "Termux:X11 installed"
 
 # --- STEP 5: PROOT DEBIAN SETUP ---
-# Check if 'pokewilds' distro already exists to prevent errors
-if proot-distro list | grep -q "^pokewilds"; then
-    echo -e "\n[Step 5/7] 'pokewilds' environment found. Skipping install. Updating packages..."
-else
-    echo -e "\n[Step 5/7] Installing Debian via proot-distro (this may take a while)..."
-    proot-distro install --override-alias pokewilds debian
-    check_status "Debian proot installed"
+proot-distro install --override-alias pokewilds debian
+if [ $? -ne 0 ]; then
+    echo "⚠️ Note: Debian installation might have failed if it alread>
 fi
+check_status "Debian proot installed"
 
 echo "Configuring/Updating Debian environment..."
 # Run update and install java regardless, to ensure it's present
