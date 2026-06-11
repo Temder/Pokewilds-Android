@@ -57,7 +57,7 @@ check_status "Termux:X11 installed"
 # --- STEP 5: PROOT DEBIAN SETUP ---
 proot-distro install --override-alias pokewilds debian
 if [ $? -ne 0 ]; then
-    echo "⚠️ Note: Debian installation might have failed if it alread>
+    echo "⚠️ Note: Debian installation might have failed if it already exists. Continuing configuration..."
 fi
 check_status "Debian proot installed"
 
