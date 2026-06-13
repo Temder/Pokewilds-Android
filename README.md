@@ -3,7 +3,17 @@ Setup scripts and guide to run Pokewilds on android.
 
 Work in progress. Bugs expected.
 
-If something is unclear or missing please create an issue.
+If something is unclear or missing please create an issue with the minimum information:
+- error message
+- at which step was the error encountered
+If you used the one line script please copy the output up to the last checkmark (✓).
+
+## New: One line script
+
+There is a new one line script. Just paste the following command in Termux and select your prefered window mode (sqare or fullscreen). You still need to download the apps (step 1). The script takes some minutes to run all commands. After it finishes you can continue with step 5.
+```bash
+bash <(curl -s https://raw.githubusercontent.com/Temder/Pokewilds-Android/refs/heads/main/setup_pokewilds.sh)
+```
 
 ## 1. Installing necessary apps
 
@@ -58,8 +68,9 @@ mkdir -p /sdcard/Pokewilds && wget -O /sdcard/Pokewilds/pokewilds.zip "https://g
 
 ## 5. Test the script
 
-Run the following command in Termux. If the game is not running, post the output as an issue in the github repository. If the game runs you can stop it by pressing CTRL + C inside Termux and continue to the next steps.
+Run the following commands in Termux. If the game is not running, post the output as an issue in the github repository. If the game runs you can stop it by pressing CTRL + C inside Termux and continue to the next steps.
 ```bash
+exit
 ~/.shortcuts/start_pokewilds.sh
 ```
 
